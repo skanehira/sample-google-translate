@@ -24,8 +24,18 @@
         </td>
       </tr>
     </table>
-    <textarea v-model="input" id="" name="" cols="30" rows="10"></textarea>
-    <button @click="translate">translate</button>
+    <table>
+      <tr>
+        <td>
+          <textarea v-model="input" cols="39" rows="10"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button @click="translate">翻訳</button>
+        </td>
+      </tr>
+    </table>
     <hr>
     <p v-for="out in output">{{out}}</p>
   </div>
