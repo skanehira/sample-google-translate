@@ -25,9 +25,6 @@ func main() {
 			return
 		}
 
-		form.Source = "ja"
-		form.Target = "en"
-
 		buf := &bytes.Buffer{}
 		if err := json.NewEncoder(buf).Encode(form); err != nil {
 			http.Error(w, err.Error(), 500)

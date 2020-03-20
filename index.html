@@ -8,10 +8,26 @@
 </head>
 <body>
   <div id="app">
+    <table>
+      <tr>
+        <td>翻訳元</td>
+        <td>
+          <select v-model="source">
+            <option v-for="op in Object.keys(options)" :value="op">{{options[op]}}</option>
+          </select>
+        </td>
+        <td>翻訳先</td>
+        <td>
+          <select v-model="target">
+            <option v-for="op in Object.keys(options)" :value="op">{{options[op]}}</option>
+          </select>
+        </td>
+      </tr>
+    </table>
     <textarea v-model="input" id="" name="" cols="30" rows="10"></textarea>
     <button @click="translate">translate</button>
     <hr>
-    <p>{{output}}</p>
+    <p v-for="out in output">{{out}}</p>
   </div>
   <script src="index.js"></script>
 </body>
